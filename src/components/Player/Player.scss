@@ -1,0 +1,64 @@
+.Player1,
+.Player2 {
+    width: 4rem;
+    height: 3rem;
+    border-style: double;
+    border-color: wheat;
+    border-radius: 100%;
+    box-shadow: 3px 1.5px 1.5px rgba(54, 54, 54, 0.607);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: wheat;
+    transition: all 400ms;
+    font-size: larger;
+}
+
+.Player2 {
+    background-color: green;
+    position: absolute;
+
+    right: 0
+}
+
+.Player1 {
+    background-color: blue;
+    position: absolute;
+    right: 0
+}
+
+.Players {
+    position: relative;
+    display: flex;
+    background-color: rgba(0, 255, 255, 0.539);
+    justify-content: space-between;
+
+}
+
+.dice {
+    // display: block;
+    width: 2rem;
+    height: 2rem;
+    mix-blend-mode: multiply;
+    position: absolute;
+    // transform: translate(-15rem, 4rem);
+}
+
+
+.dice-move {
+    width: 2rem;
+    height: 2rem;
+    mix-blend-mode: multiply;
+    position: absolute;
+    animation: slidein 900ms infinite;
+}
+
+@keyframes slidein {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg)
+    }
+}

@@ -1,0 +1,20 @@
+.Snake {
+    position: absolute;
+    width: fit-content;
+    // mix-blend-mode: multiply;
+}
+
+.snake1 {
+    aspect-ratio: 1/1;
+    width: 20rem;
+    height: 20rem;
+    transform: translate(4rem, -10rem);
+
+}
+.snake2{
+    aspect-ratio: 1/1;
+    width: 20rem;
+    height: 28rem;
+    transform: translate(3rem, -1rem) rotateY(180deg);
+
+}
