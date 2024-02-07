@@ -5,7 +5,7 @@ import './Player.scss'
 const Player = () => {
 
     // Move the player 1
-    const [isPlayerOne, setIsPlayerOne] = useState({ X: -1, Y: -1});
+    const [isPlayerOne, setIsPlayerOne] = useState({ X: -1, Y: -8});
 
     // Move the player 2
     const [isPlayerTwo, setIsPlayerTwo] = useState({ X: -1, Y: -1 });
@@ -58,7 +58,7 @@ const Player = () => {
 
         setTimeout(() => {
             setThrow(false)
-        }, 4000);
+        }, 1000);
     }
 
     useEffect(() => {
@@ -106,12 +106,12 @@ const Player = () => {
 
 
         // Climb Down the 2nd Snake
-        if (isPlayerOne.X === 0 && isPlayerOne.Y === -9) {
-            setIsPlayerOne({ X: 4, Y: -1 });
+        if (isPlayerOne.X === 1 && isPlayerOne.Y === -9) {
+            setIsPlayerOne({ X: 5, Y: -1 });
         }
 
-        if (isPlayerTwo.X === 0 && isPlayerTwo.Y === -9) {
-            setIsPlayerTwo({ X: 4, Y: -1 });
+        if (isPlayerTwo.X === 1 && isPlayerTwo.Y === -9) {
+            setIsPlayerTwo({ X: 5, Y: -1 });
         }
 
 
@@ -153,7 +153,7 @@ const Player = () => {
             <div className='Player1' style={{ transform: `translate(${-(isPlayerOne.X) * 100}%, ${isPlayerOne.Y * 98}%)` }}>1
             </div>
             <button
-                disabled={winner}
+                disabled={winner || Throw}
                 onClick={
                     RandomNumber}
                 style={{ height: "10%" }}
